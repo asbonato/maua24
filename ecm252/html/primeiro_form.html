@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form>
+      <!-- associação label-input com o uso do for -->
+      <label for="primeiroNome">Primeiro nome:</label>
+      <input id="primeiroNome" type="text" />
+      <!-- associação label-input por aninhamento -->
+      <label>Sobrenome:<input type="text"></label>
+      <!-- tipo e-mail -->
+      <label for="email">E-mail:</label>
+      <input id="email" type="email">
+      <!-- tipo telefone -->
+      <label for="telefone">Telefone:</label>
+      <input id="telefone" type="tel">
+      <!-- tipo cor -->
+      <label for="cor">Cor:</label>
+      <input id="cor" type="color">
+      <!-- tipo arquivo -->
+      <label id="arquivo">Arquivo:</label>
+      <input id="arquivo" type="file">
+      <!-- tipo data-->
+      <label for="data">Data:</label>
+      <input id="data" type="date">
+      <!-- caixa de texto -->
+      <label for="mensagem">Sua mensagem:</label>
+      <textarea id="mensagem" cols="35" rows="10"></textarea>
+      <!-- botão submit -->
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
