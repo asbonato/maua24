@@ -6,14 +6,27 @@
     <title>Cascata e especificidade</title>
     <link rel="stylesheet" href="css/cascata_e_especificidade.css">
     <style>
-        p {
-            color: blue !important;
+        /* especificidade 1-0-0 */
+        /* vale 100 pontos */
+        #titulo {
+            color: blue;
         }
+        /* especificidade 0-1-0 */
+        /* vale 10 pontos */
+        .descricao {
+            color: green;
+        }
+        /*especificidade 0-0-1*/
+        /* vale 1 ponto */
+        p {
+            color: red;
+        }
+
     </style>
     
 </head>
 <body>
-    <p style="color: purple; color: yellow">Um parágrafo.</p>
+    <p id="titulo" class="descricao">Algoritmo de especificidade do css</p>
     
 </body>
 </html>
