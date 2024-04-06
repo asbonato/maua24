@@ -1,9 +1,8 @@
-h1 {
+#titulo {
     color: green;
+    text-align: center;
 }
-p {
+
+p#descricao {
     color: blue;
-}
-strong {
-    color: red;
 }
