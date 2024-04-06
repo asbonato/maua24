@@ -6,3 +6,8 @@
 p#descricao {
     color: blue;
 }
+
+p.promocao {
+    text-align: center;
+    background-color: lightgreen;
+}
