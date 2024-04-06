@@ -11,3 +11,12 @@ p.promocao {
     text-align: center;
     background-color: lightgreen;
 }
+
+.nova {
+    color: white;
+}
+
+p.final-pagina#rodape {
+    background-color: lightgray;
+    text-align: center;
+}
