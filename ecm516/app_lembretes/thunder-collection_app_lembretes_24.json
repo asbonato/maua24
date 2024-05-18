@@ -2,41 +2,14 @@
     "clientName": "Thunder Client",
     "collectionName": "app_lembretes_24",
     "collectionId": "002381fb-7e7a-439c-af80-10674c161179",
-    "dateExported": "2024-05-11T11:11:00.367Z",
+    "dateExported": "2024-05-18T11:06:47.209Z",
     "version": "1.2",
-    "folders": [
-        {
-            "_id": "9c3173c8-bc05-4260-a3fa-a3b66a1a9cd6",
-            "name": "lembretes",
-            "containerId": "",
-            "created": "2024-05-04T13:04:27.068Z",
-            "sortNum": 10000
-        },
-        {
-            "_id": "8ddef1ce-7057-4e96-830c-4c7e5062649f",
-            "name": "observações",
-            "containerId": "",
-            "created": "2024-05-04T13:04:50.875Z",
-            "sortNum": 20000
-        }
-    ],
+    "folders": [],
     "requests": [
-        {
-            "_id": "b86acfa5-a7ed-4a81-b76a-dc46bac10847",
-            "colId": "002381fb-7e7a-439c-af80-10674c161179",
-            "containerId": "9c3173c8-bc05-4260-a3fa-a3b66a1a9cd6",
-            "name": "listar_lembretes",
-            "url": "http://localhost:4000/lembretes",
-            "method": "GET",
-            "sortNum": 10000,
-            "created": "2024-05-04T11:58:11.128Z",
-            "modified": "2024-05-04T11:58:11.128Z",
-            "headers": []
-        },
         {
             "_id": "cb638047-b95e-46ac-8d0e-0137ed3ecdbd",
             "colId": "002381fb-7e7a-439c-af80-10674c161179",
-            "containerId": "8ddef1ce-7057-4e96-830c-4c7e5062649f",
+            "containerId": "",
             "name": "criar_observação",
             "url": "http://localhost:5000/lembretes/1/observacoes",
             "method": "POST",
@@ -51,13 +24,37 @@
             }
         },
         {
+            "_id": "983f2c17-5c04-45d8-8a8f-245dec457fb5",
+            "colId": "002381fb-7e7a-439c-af80-10674c161179",
+            "containerId": "",
+            "name": "listar_observações",
+            "url": "http://localhost:5000/lembretes/1/observacoes",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-04T13:03:28.882Z",
+            "modified": "2024-05-04T13:03:45.669Z",
+            "headers": []
+        },
+        {
+            "_id": "b86acfa5-a7ed-4a81-b76a-dc46bac10847",
+            "colId": "002381fb-7e7a-439c-af80-10674c161179",
+            "containerId": "",
+            "name": "listar_lembretes",
+            "url": "http://localhost:4000/lembretes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-04T11:58:11.128Z",
+            "modified": "2024-05-04T11:58:11.128Z",
+            "headers": []
+        },
+        {
             "_id": "7142fda4-e1a0-4723-9fef-81d595d9d764",
             "colId": "002381fb-7e7a-439c-af80-10674c161179",
-            "containerId": "9c3173c8-bc05-4260-a3fa-a3b66a1a9cd6",
+            "containerId": "",
             "name": "criar_lembrete",
             "url": "http://localhost:4000/lembretes",
             "method": "POST",
-            "sortNum": 20000,
+            "sortNum": 40000,
             "created": "2024-05-04T11:58:32.830Z",
             "modified": "2024-05-04T13:02:19.721Z",
             "headers": [],
@@ -66,19 +63,7 @@
                 "raw": "{\n  \"texto\": \"fazer café\"\n}",
                 "form": []
             }
-        },
-        {
-            "_id": "983f2c17-5c04-45d8-8a8f-245dec457fb5",
-            "colId": "002381fb-7e7a-439c-af80-10674c161179",
-            "containerId": "8ddef1ce-7057-4e96-830c-4c7e5062649f",
-            "name": "listar_observações",
-            "url": "http://localhost:5000/lembretes/1/observacoes",
-            "method": "GET",
-            "sortNum": 20000,
-            "created": "2024-05-04T13:03:28.882Z",
-            "modified": "2024-05-04T13:03:45.669Z",
-            "headers": []
         }
     ],
-    "ref": "bWBk3VDV-quUlb2OXrDVAKIdhGXFuRdzKUAwEd6M07l8ko3oOMdO6wTv0cdn2AmFvfgpkARG0glV6SIClumskA"
+    "ref": "bWBk3VDV-quUlb2OXrDVAEivQPfJqe3F86T2mkQnUGWcJRTffyM4n3Z3JtjFAxxXUG8qDCeTZTnJpJk_4sPkfg"
 }
