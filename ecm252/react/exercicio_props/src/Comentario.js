@@ -3,7 +3,7 @@ import React from 'react';
 export default function Comentario({nome, texto, data, foto}) {
     return(
         <div className='d-flex'>
-            <img src={foto} alt='foto'/>
+            <img src={foto} alt='foto' width={150}/>
             <div className='ms-2 p-0 position-relative'>
                 <h2 className='border-bottom'>{nome}</h2>
                 <p>{texto}</p>
