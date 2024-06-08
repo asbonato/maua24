@@ -2,19 +2,35 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
 import {createRoot} from 'react-dom/client'
 import '@fortawesome/fontawesome-free/css/all.css'
+import { EstacaoClimatica } from './EstacaoClimatica'
 
 class App extends React.Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            latitude: null,
-            longitude: null,
-            estacao: null,
-            data: null,
-            icone: null,
-            mensagemDeErro: null,
-        }
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             latitude: null,
+//             longitude: null,
+//             estacao: null,
+//             data: null,
+//             icone: null,
+//             mensagemDeErro: null,
+//         }
+//     }
+    //inicializando o estado fora do construtor
+    state = {
+        latitude: null,
+        longitude: null,
+        estacao: null,
+        data: null,
+        icone: null,
+        mensagemDeErro: null,
     }
+
+
+    componentDidMount(){
+        this.obterLocalizacao()
+    }
+
     obterEstacao = (data, latitude) => {
         const anoAtual = data.getFullYear()
         //new Date(ano, mês(0 a 11), dia(1 a 31))
@@ -50,7 +66,7 @@ class App extends React.Component {
                 let data = new Date()
                 let estacao = this.obterEstacao(data, posicao.coords.latitude)
                 let icone = this.icones[estacao]
-                console.log('obterLocalizacao', estacao)
+                //console.log('obterLocalizacao', estacao)
                 this.setState(
                     {
                         latitude: posicao.coords.latitude,
@@ -69,7 +85,6 @@ class App extends React.Component {
     }
 
     render(){
-        console.log(this.state)
         return (
             //responsividade, margem acima
             <div className='container mt-2'>
@@ -78,38 +93,15 @@ class App extends React.Component {
                     {/** oito colunas das doze disponíveis são usadas para 
                          telas médias em diante */}
                     <div className='col-md-8'>
-                         {/** um cartão bootstrap */}
-                         <div className='card'>
-                            {/** corpo do cartão */}
-                            <div className='card-body'>
-                                {/** centraliza verticalmente, margem abaixo */}
-                                <div className='d-flex align-items-center border rounded mb-2'
-                                     style={{height:'6rem'}}>
-                                     {/** ícone obtido do estado do componente */}
-                                    <i className={`fas fa-5x ${this.state.icone}`}></i>  
-                                    {/** largura 75%, margem à esquerda (start), 
-                                         fs aumenta a fonte */}  
-                                    <p className='w-75 ms-3 text-center fs-1'>{this.state.estacao}</p> 
-                                </div>
-                                <p className='text-center'>
-                                {/** renderização condicional */}
-                                {
-                                    this.state.latitude?
-                                    `Coordenadas: ${this.state.latitude}, ${this.state.longitude}, Data: ${this.state.data}`
-                                    :
-                                    this.state.mensagemDeErro?
-                                        `${this.state.mensagemDeErro}`
-                                    :
-                                        'Clique no botão para saber a sua estação climática.'
-                                }
-                                </p>
-                                {/** botão azul (outline, 100% de largura, margem acima) */}
-                                <button onClick={this.obterLocalizacao}
-                                        className='btn btn-outline-primary w-100 mt-2'>
-                                    Qual a minha estação?        
-                                </button>
-                            </div>
-                         </div>
+                        <EstacaoClimatica
+                            icone={this.state.icone}
+                            estacao={this.state.estacao}
+                            latitude={this.state.latitude}
+                            longitude={this.state.longitude}
+                            data={this.state.data}
+                            mensagemDeErro={this.state.mensagemDeErro}
+                            obterLocalizacao = {this.obterLocalizacao}
+                        />
                     </div>
                 </div>    
             </div>
